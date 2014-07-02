@@ -18,6 +18,7 @@ body {
   background: #9B59B6;
   padding-bottom: 20px;
   font-family: 'Montserrat', arial, sans-serif;
+  text-rendering: optimizeLegibility;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -30,15 +31,16 @@ body {
 
 /* Custom page header */
 .header {
-  
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-left: -20px;
+    font-size: 142px;
     line-height: 40px;
-    padding-bottom: 19px;
+    padding-top: 100px;
+    padding-bottom: 200px;
     color: white;
+    text-align: center;
   }
 }
 
