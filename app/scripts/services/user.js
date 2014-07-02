@@ -3,7 +3,7 @@
 angular.module('yoFrontApp')
   .factory('UserLogin', ['$resource', function($resource) {
 
-    return $resource( 'https://api.parse.com:80/2/user_login', 
+    return $resource( 'https://api.parse.com/2/user_login', 
         { }, { 
             submit: { 
                 method: 'POST', 
@@ -18,7 +18,7 @@ angular.module('yoFrontApp')
 angular.module('yoFrontApp')
   .factory('Update', ['$resource', function($resource) {
 
-    return $resource( 'https://api.parse.com:80/2/update', 
+    return $resource( 'https://api.parse.com/2/update', 
         { }, { 
             get: { 
                 method: 'GET', 
