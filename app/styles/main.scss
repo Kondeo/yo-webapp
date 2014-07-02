@@ -37,7 +37,7 @@ body {
     margin-left: -20px;
     font-size: 142px;
     line-height: 40px;
-    padding-top: 100px;
+    padding-top: 130px;
     padding-bottom: 200px;
     color: white;
     text-align: center;
@@ -103,11 +103,16 @@ body {
 
 
 /* User Forms */
+.main-form-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
 .main-form-username {
   padding: 10px;
   padding-top: 25px;
   padding-bottom: 25px;
-  background-color: lime;
+  background-color: #2ce88a;
   border: none;
   font-size: 25px;
   text-align: center;
@@ -119,7 +124,7 @@ body {
   padding: 10px;
   padding-top: 25px;
   padding-bottom: 25px;
-  background-color: blue;
+  background-color: #e8e82c;
   border: none;
   font-size: 25px;
   text-align: center;
@@ -129,7 +134,7 @@ body {
 
 .main-form-login {
   padding: 25px 125px 25px 125px;
-  background-color: blue;
+  background-color: #e82c2c;
   border: none;
   font-size: 25px;
   text-align: center;
@@ -139,8 +144,8 @@ body {
 }
 
 .main-form-signup {
-  padding: 25px 112.5px 25px 112.5px;
-  background-color: lime;
+  padding: 25px 113px 25px 113px;
+  background-color: #2c8ae8;
   border: none;
   font-size: 25px;
   text-align: center;
