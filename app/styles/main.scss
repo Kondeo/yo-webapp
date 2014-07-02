@@ -3,7 +3,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
 
-@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:700);
 
 .browsehappy {
   margin: 0.2em 0;
@@ -97,4 +97,66 @@ body {
     border-bottom: 0;
     border-radius: 0px;
   }
+}
+
+
+/* User Forms */
+.main-form-username {
+  padding: 10px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: lime;
+  border: none;
+  font-size: 25px;
+  text-align: center;
+
+}
+
+.main-form-password {
+  padding: 10px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: blue;
+  border: none;
+  font-size: 25px;
+  text-align: center;
+
+}
+
+.main-form-login {
+  padding: 25px 125px 25px 125px;
+  background-color: blue;
+  border: none;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  border-radius: 0px;
+
+}
+
+.main-form-signup {
+  padding: 25px 112.5px 25px 112.5px;
+  background-color: lime;
+  border: none;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  border-radius: 0px;
+
+}
+
+/* Form placeholder colors */
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    white;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color:    white;
+      opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color:    white;
+      opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color:    white;
 }
