@@ -23,6 +23,14 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/joinyo', {
+        templateUrl: 'views/loginregister.html',
+        controller: 'LoginRegisterCtrl'
+      })
+      .when('/welcome', {
+        templateUrl: 'views/welcome.html',
+        controller: 'WelcomeCtrl'
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
