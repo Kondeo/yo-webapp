@@ -1,32 +1,30 @@
 'use strict';
 
 angular.module('yoFrontApp')
-  .factory('UserLogin', ['$resource', function($resource) {
+  .factory('DoYo', ['$resource', function($resource) {
 
-    return $resource( 'https://api.parse.com/2/user_login', 
+    return $resource( 'http://192.168.0.8:3000/doyo.php', 
         { }, { 
             submit: { 
                 method: 'POST', 
                 params: {}, 
-                headers: { 'Authorization': 'OAuth oauth_consumer_key="iPmwrhjFVCYwL4ZZlicpCIeyJIbRUuXvPhLMCxOs", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1404300639", oauth_nonce="-26758008177814738", oauth_signature="epxGp1%2F8PGGLPf5vBwPw%2FKHPQp0%3D"' },
                 isArray: false 
-            },
+            }
             
         } );
 
 }]);
 
 angular.module('yoFrontApp')
-  .factory('Update', ['$resource', function($resource) {
+  .factory('Login', ['$resource', function($resource) {
 
-    return $resource( 'https://api.parse.com/2/update', 
+    return $resource('http://192.168.0.8:3000/login.php', 
         { }, { 
-            get: { 
+            submit: { 
                 method: 'GET', 
                 params: {}, 
-                headers: { 'Authorization': 'OAuth oauth_consumer_key="iPmwrhjFVCYwL4ZZlicpCIeyJIbRUuXvPhLMCxOs", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1404300639", oauth_nonce="-26758008177814738", oauth_signature="epxGp1%2F8PGGLPf5vBwPw%2FKHPQp0%3D"' },
                 isArray: false 
-            },
+            }
             
         } );
 
