@@ -70,7 +70,7 @@ angular.module('yoFrontApp')
             "iid": iid
         }
 
-        $scope.loginfinish = DoYo.submit(sendyojson, function(){
+        $scope.doyofinish = DoYo.submit(sendyojson, function(){
             //Change text momentarily to say Sent!
         });
     }
