@@ -1,1 +1,17 @@
-<div class="subtitle">You are logged in!</div>
+<table class="main-table">
+    <tr>
+      <td>
+        <form id="addfriend">
+        <input id="createfriend" class="btn main-add-friend" ng-click="" ng-model="createfriend.username" placeholder="+" />
+        </form>
+      </td>
+    </tr>
+    <tr class="animate-repeat" ng-repeat="friend in friends">
+      <td>
+        
+        <button class="btn main-yo-friend friend-color-{{getRandomSpan()}}" ng-click="">{{friend.username}}</button>
+
+      </td>
+    </tr>
+</table>
+

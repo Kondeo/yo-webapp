@@ -235,6 +235,50 @@ body {
   color: white;
 }
 
+.main-table {
+  max-width: 50%;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-add-friend {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: $green;
+  border: none;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+
+}
+
+.main-yo-friend {
+  min-width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: $alazarin;
+  border: none;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  border-radius: 0px;
+
+}
+
+.friend-color-1 {
+  background-color: $sunflower;
+}
+.friend-color-2 {
+  background-color: $peter;
+}
+.friend-color-3 {
+  background-color: $emerald;
+}
+.friend-color-4 {
+  background-color: $belize;
+}
+
 /* Form placeholder colors */
 ::-webkit-input-placeholder { /* WebKit browsers */
     color:    white;
@@ -259,6 +303,10 @@ body {
   margin-right: auto;
   white-space: nowrap;
   
+}
+
+.no-bullets {
+    list-style-type: none;
 }
 
 /* PART 1: The Lonesome Beast
