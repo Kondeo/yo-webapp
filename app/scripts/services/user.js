@@ -29,3 +29,18 @@ angular.module('yoFrontApp')
         } );
 
 }]);
+
+angular.module('yoFrontApp')
+  .factory('Signup', ['$resource', function($resource) {
+
+    return $resource('http://webyo.co/api/signup.php', 
+        { }, { 
+            submit: { 
+                method: 'GET', 
+                params: {}, 
+                isArray: false 
+            }
+            
+        } );
+
+}]);

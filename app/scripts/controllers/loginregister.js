@@ -8,7 +8,7 @@
  * Controller of the yoFrontApp
  */
 angular.module('yoFrontApp')
-  .controller('LoginRegisterCtrl', function ($scope, Login, DoYo) {
+  .controller('LoginRegisterCtrl', function ($scope, Login, Signup, DoYo) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -43,6 +43,33 @@ angular.module('yoFrontApp')
 
         });
     }
+
+    $scope.signup = function(){
+
+        var iid = Math.floor(Math.random() * 100000000) + "-" + Math.floor(Math.random() * 10000) + "-" + Math.floor(Math.random() * 10000) + "-" + Math.floor(Math.random() * 10000) + "-" + Math.floor(Math.random() * 1000000000000);
+        var udid = Math.floor(Math.random() * 10000000000000000);
+        
+        var username = $scope.userform.username.toUpperCase();
+
+        var signupjson = { 
+            "username": username,
+            "user_password": $scope.userform.password,
+            "iid": iid,
+            "udid": udid
+        }
+
+        $scope.signupfinish = Signup.submit(signupjson, function(){
+
+            document.cookie = "iid=" + iid + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
+            document.cookie = "session_token=" + $scope.signupfinish.result.session_token + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
+            document.cookie = "username=" + username + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
+            document.cookie = "udid=" + udid + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
+
+            $scope.go("/#/");
+
+        });
+    }
+
   });
 
 
