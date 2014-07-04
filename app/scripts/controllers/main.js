@@ -8,7 +8,7 @@
  * Controller of the yoFrontApp
  */
 angular.module('yoFrontApp')
-  .controller('MainCtrl', function ($scope, $cookies) {
+  .controller('MainCtrl', function ($scope, $cookies, DoYo) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -19,7 +19,7 @@ angular.module('yoFrontApp')
 
     $('#addfriend input').keydown(function(e) {
         if (e.keyCode == 13) {
-            addFriend($scope.createfriend.username);
+            addFriend($scope.friendusername);
         }
     });
 
@@ -47,12 +47,33 @@ angular.module('yoFrontApp')
         $scope.session_token = getCookie('session_token');
         $scope.username = getCookie('username');
         $scope.udid = getCookie('udid');
-        $scope.friends = JSON.parse(getCookie('friends'));
+        if(getCookie('friends') == ""){
+            $scope.friends = [];
+        } else {
+            $scope.friends = JSON.parse(getCookie('friends'));
+        }
+        
         
     }
 
+    $scope.doyo = function(recipient){
 
+        var iid = $scope.iid;
+        var udid = $scope.udid;
+        var session_token = $scope.session_token;
+        var sendto = recipient;
 
+        var sendyojson = { 
+            "sendto": sendto,
+            "session_token": session_token,
+            "udid": udid,
+            "iid": iid
+        }
+
+        $scope.loginfinish = DoYo.submit(sendyojson, function(){
+            //Change text momentarily to say Sent!
+        });
+    }
   });
 
 function getCookie(cname) {
@@ -67,9 +88,13 @@ function getCookie(cname) {
 
 function addFriend(username) {
     
-    var userObject = {"username": username };
+    var upperUsername = username.toUpperCase();
 
-    if(getCookie('friends') == ""){
+    var userObject = {"username": upperUsername};
+
+    var friendsString = getCookie('friends');
+
+    if(friendsString == "" || friendsString == null || !JSON.parse(friendsString)){
         var friends = [];
     } else {
         var currfriendsCookie = getCookie('friends');
@@ -78,6 +103,7 @@ function addFriend(username) {
 
     friends.push(userObject);
     var friendsCookie = friends;
+    //alert(JSON.stringify(friendsCookie));
     document.cookie = "friends=" + JSON.stringify(friendsCookie) + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
 
     location.reload();
