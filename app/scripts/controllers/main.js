@@ -74,6 +74,19 @@ angular.module('yoFrontApp')
             //Change text momentarily to say Sent!
         });
     }
+
+    $scope.logout = function(){
+        
+        document.cookie = "friends=; expires=Thu, 01 Jan 1970 00:00:00 GMT;";
+        document.cookie = "session_token=; expires=Thu, 01 Jan 1970 00:00:00 GMT;";
+        document.cookie = "iid=; expires=Thu, 01 Jan 1970 00:00:00 GMT;";
+        document.cookie = "udid=; expires=Thu, 01 Jan 1970 00:00:00 GMT;";
+        document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT;";
+
+        location.reload();
+
+    }
+
   });
 
 function getCookie(cname) {
@@ -105,6 +118,14 @@ function addFriend(username) {
     var friendsCookie = friends;
     //alert(JSON.stringify(friendsCookie));
     document.cookie = "friends=" + JSON.stringify(friendsCookie) + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
+
+    location.reload();
+
+}
+
+function deleteFriends() {
+    
+    document.cookie = "friends=; expires=Sun, 18 Jan 2012 12:00:00 GMT;";
 
     location.reload();
 
