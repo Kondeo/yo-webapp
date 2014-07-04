@@ -3,7 +3,7 @@
 angular.module('yoFrontApp')
   .factory('DoYo', ['$resource', function($resource) {
 
-    return $resource( 'http://localhost:3000/doyo.php', 
+    return $resource( 'http://webyo.co/api/doyo.php', 
         { }, { 
             submit: { 
                 method: 'GET', 
@@ -18,7 +18,7 @@ angular.module('yoFrontApp')
 angular.module('yoFrontApp')
   .factory('Login', ['$resource', function($resource) {
 
-    return $resource('http://localhost:3000/login.php', 
+    return $resource('http://webyo.co/api/login.php', 
         { }, { 
             submit: { 
                 method: 'GET', 
