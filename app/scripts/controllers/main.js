@@ -23,6 +23,7 @@ angular.module('yoFrontApp')
     if((getCookie("iid") == "") || (getCookie("session_token") == "") || (getCookie("username") == "") || (getCookie("udid") == "")){
         $scope.go("/#/welcome");
     } else {
+        $scope.user = "";
         $scope.user.iid = getCookie('iid');
         $scope.user.session_token = getCookie('session_token');
         $scope.user.username = getCookie('username');
