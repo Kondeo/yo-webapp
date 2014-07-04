@@ -23,9 +23,11 @@ angular.module('yoFrontApp')
     $scope.login = function(){
 
         var iid = Math.floor(Math.random() * 100000000) + "-" + Math.floor(Math.random() * 10000) + "-" + Math.floor(Math.random() * 10000) + "-" + Math.floor(Math.random() * 10000) + "-" + Math.floor(Math.random() * 1000000000000);
+        
+        var username = $scope.userform.username.toUpperCase();
 
         var loginjson = { 
-            "username": $scope.userform.username,
+            "username": username,
             "user_password": $scope.userform.password,
             "iid": iid
         }
