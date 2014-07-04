@@ -65,7 +65,7 @@ body {
     font-size: 180px;
     line-height: 40px;
     padding-top: 130px;
-    padding-bottom: 150px;
+    padding-bottom: 120px;
     color: white;
     text-align: center;
     max-width: 100%;
@@ -75,7 +75,7 @@ body {
 
 .subtitle {
   color: white;
-  max-width: 100%;
+  max-width: 70%;
   margin-left: auto;
   margin-right: auto;
   font-size: 50px;
@@ -172,7 +172,6 @@ body {
   font-size: 25px;
   text-align: center;
   color: white;
-  margin: none;
 
 }
 
@@ -183,7 +182,6 @@ body {
   font-size: 25px;
   text-align: center;
   color: white;
-  border-radius: 0px;
 
 }
 
@@ -194,8 +192,28 @@ body {
   font-size: 25px;
   text-align: center;
   color: white;
-  border-radius: 0px;
 
+}
+
+.welcome-button-container {
+  width: auto;
+  padding: 0px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70%;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.welcome-button {
+  padding: 25px 113px 25px 113px;
+  background-color: $peter;
+  border: none;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  margin: auto;
 }
 
 .main-form-login:hover { 
@@ -226,7 +244,7 @@ body {
 .custom-footer {
   color: white;
   text-align: center;
-  max-width: 100%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   white-space: nowrap;
@@ -239,4 +257,7 @@ body {
 sad existence pecking furiously at the ground in hopes that even the
 tiniest of morsels would fill his gullet. Yet, even as Henry picked at
 the ground he knew how improbable, likely impossible, it would be to 
-happen upon any .  */
+happen upon any sort of meal. Poor Henry happened to also be made fun
+of by all the other chickens, possibly due to the fact that Henry was
+know better by his nickname than his true name. Little Henry the
+Headless they called him. His stout stature and  */
