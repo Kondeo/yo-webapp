@@ -47,6 +47,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+input {
+  outline: none !important;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -188,7 +192,7 @@ body {
   border: none;
   font-size: 25px;
   text-align: center;
-  color: white;
+  color: white !important;
   border-radius: 0px;
 
 }
@@ -201,7 +205,7 @@ body {
   border: none;
   font-size: 25px;
   text-align: center;
-  color: white;
+  color: white !important;
   border-radius: 0px;
 
 }
@@ -223,7 +227,7 @@ body {
   border: none;
   font-size: 25px;
   text-align: center;
-  color: white;
+  color: white !important;
   margin: auto;
   border-radius: 0px;
 }
@@ -232,10 +236,47 @@ body {
   color: white;
 }
 
+.main-form-login:active { 
+  color: white !important;
+  outline: none !important;
+  outline: 0px !important;
+}
+
+.main-form-login:focus {
+  color: white !important;
+  outline: 0px !important;
+}
 
 .main-form-signup:hover { 
   color: white;
 }
+
+.main-form-signup:active { 
+  color: white !important;
+  outline: none !important;
+  outline: 0px !important;
+}
+
+.main-form-signup:focus {
+  color: white !important;
+  outline: 0px !important;
+}
+
+.welcome-button:hover { 
+  color: white;
+}
+
+.welcome-button:active { 
+  color: white !important;
+  outline: none !important;
+  outline: 0px !important;
+}
+
+.welcome-button:focus {
+  color: white !important;
+  outline: 0px !important;
+}
+
 
 .main-table {
   max-width: 50%;
@@ -269,7 +310,7 @@ body {
 }
 
 .friend-color-1 {
-  background-color: $sunflower;
+  background-color: $alazarin;
 }
 .friend-color-2 {
   background-color: $peter;
@@ -279,6 +320,9 @@ body {
 }
 .friend-color-4 {
   background-color: $belize;
+}
+.friend-color-logout {
+  background-color: $green;
 }
 
 /* Form placeholder colors */
