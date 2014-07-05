@@ -292,7 +292,7 @@ input {
   border: none;
   font-size: 25px;
   text-align: center;
-  color: white;
+  color: white !important;
 
 }
 
@@ -309,6 +309,21 @@ input {
 
 }
 
+.main-yo-friend:hover { 
+  color: white;
+}
+
+.main-yo-friend:active { 
+  color: white !important;
+  outline: none !important;
+  outline: 0px !important;
+}
+
+.main-yo-friend:focus {
+  color: white !important;
+  outline: 0px !important;
+}
+
 .friend-color-1 {
   background-color: $alazarin;
 }
@@ -320,6 +335,15 @@ input {
 }
 .friend-color-4 {
   background-color: $belize;
+}
+.friend-color-5 {
+  background-color: $wisteria;
+}
+.friend-color-6 {
+  background-color: $turquoise;
+}
+.friend-color-7 {
+  background-color: $asphalt;
 }
 .friend-color-logout {
   background-color: $green;
