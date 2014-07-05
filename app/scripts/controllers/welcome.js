@@ -19,7 +19,9 @@ angular.module('yoFrontApp')
         console.log("url switch for " + requrl);
         window.location.href = requrl;
     }
-    
+
+    if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      alert('This site is not optimized for mobile. Please use the Yo app for mobile access. You will now be redirected to the Yo mobile site.');
+      $scope.go('http://www.justyo.co');
+    }
   });
-
-
