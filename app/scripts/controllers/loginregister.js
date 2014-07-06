@@ -34,12 +34,18 @@ angular.module('yoFrontApp')
 
         $scope.loginfinish = Login.submit(loginjson, function(){
 
-            document.cookie = "iid=" + iid + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
-            document.cookie = "session_token=" + $scope.loginfinish.result.session_token + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
-            document.cookie = "username=" + $scope.loginfinish.result.data.username + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
-            document.cookie = "udid=" + $scope.loginfinish.result.data.udid + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
+            if (!$scope.loginfinish.result) {
+                alert("Sorry, that isn't the correct username and password.");
+            } else {
 
-            $scope.go("/#/");
+                document.cookie = "iid=" + iid + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
+                document.cookie = "session_token=" + $scope.loginfinish.result.session_token + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
+                document.cookie = "username=" + $scope.loginfinish.result.data.username + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
+                document.cookie = "udid=" + $scope.loginfinish.result.data.udid + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
+
+                $scope.go("/#/");
+
+            }
 
         });
     }
@@ -60,12 +66,18 @@ angular.module('yoFrontApp')
 
         $scope.signupfinish = Signup.submit(signupjson, function(){
 
-            document.cookie = "iid=" + iid + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
-            document.cookie = "session_token=" + $scope.signupfinish.result.session_token + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
-            document.cookie = "username=" + username + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
-            document.cookie = "udid=" + udid + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
+            if (!$scope.signupfinish.result) {
+                alert("Sorry, that username has already been taken.");
+            } else {
 
-            $scope.go("/#/");
+                document.cookie = "iid=" + iid + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
+                document.cookie = "session_token=" + $scope.signupfinish.result.session_token + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
+                document.cookie = "username=" + username + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
+                document.cookie = "udid=" + udid + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
+
+                $scope.go("/#/");
+
+            }
 
         });
     }
